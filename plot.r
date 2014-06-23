@@ -10,5 +10,8 @@ data[,1] = x.values(time.steps)
 data[,2] = y.values(time.steps)
 f = aadeba(data, adapptive=TRUE, parallel=TRUE, beta=-1.125)
 f = render(f)
-plot(f)
-points(data[,1], data[,2] pch=19)
+plot(f, tpye='both')
+
+### ToDo / ToTry ###
+# * Javier tried to fix the code, ended up breaking several lines. plz fix.
+# * Resolution of time steps too low, try decreasing step length. Sweet spot should be when image is clear.
